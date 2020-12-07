@@ -5,12 +5,14 @@
     <button @click="setSelectedComponent('manage-goals')">Manage Goals</button>
     <!-- <active-goals v-if="selectedComponent === 'active-goals'" />
     <manage-goals v-if="selectedComponent === 'manage-goals'" /> -->
-    <component :is="selectedComponent" />
+    <keep-alive>
+      <component :is="selectedComponent" />
+    </keep-alive>
   </div>
 </template>
 
 <script>
-import TheHeader from "./components/TheHeader.vue";
+import TheHeader from "./components/Layout/TheHeader.vue";
 import ActiveGoals from "./components/ActiveGoals.vue";
 import ManageGoals from "./components/ManageGoals.vue";
 
