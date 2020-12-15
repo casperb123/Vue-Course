@@ -4,10 +4,16 @@
       <component :is="slotProps.Component"></component>
     </transition>
   </router-view>
+  <users-list />
 </template>  
 
 <script>
+import UsersList from './components/UsersList.vue';
+
 export default {
+  components: {
+    UsersList,
+  },
   data() {
     return {
       animatedBlock: false,

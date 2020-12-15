@@ -52,7 +52,7 @@ li {
 }
 
 .user-list-enter-to,
-.user-list-enter-from {
+.user-list-leave-from {
   opacity: 1;
   transform: translateX(0);
 }
